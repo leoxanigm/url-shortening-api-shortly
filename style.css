@@ -1,0 +1,178 @@
+/* Make mobile responsive on production version */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cyan: hsl(180, 66%, 49%);
+  --dark-violet: hsl(257, 27%, 26%);
+  --red: hsl(0, 87%, 67%);
+  --grey: hsl(0, 0%, 75%);
+  --white: #fff;
+  --gray-violet: hsl(257, 7%, 63%);
+  --light-gray-violet: hsl(257, 7%, 95%);
+  --dark-blue: hsl(255, 11%, 22%);
+  --dark-violet: hsl(260, 8%, 14%);
+}
+
+/* global start */
+
+body {
+  font-family: 'Poppins', Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background: var(--light-gray-violet);
+}
+
+.btn,
+input {
+  border: none;
+  background: none;
+}
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:active,
+.btn:hover,
+.btn:focus,
+input:active,
+input:hover,
+input:focus {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* global end */
+
+.main-container {
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title h1 {
+  color: var(--dark-blue);
+  font-size: 4rem;
+  margin-bottom: -0.5rem;
+}
+
+.title h2 {
+  color: var(--cyan);
+  font-size: 1rem;
+}
+
+.input-container {
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+  background-color: var(--dark-blue);
+  background-image: url('img/bg-shorten-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: 125%;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.input-container .input {
+  padding-right: 1rem;
+  flex: 4;
+}
+
+.input-container .input.error {
+  color: var(--red);
+  font-style: italic;
+}
+
+.input-container #link-input {
+  color: var(--dark-blue);
+  font-size: 14px;
+  width: 100%;
+  background: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 0.35rem;
+  padding: 0.5rem 1rem;
+}
+
+.input-container .btn {
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--cyan);
+  border-radius: 0.35rem;
+  padding: 0.8rem 0.35rem;
+  flex: 1;
+}
+
+.link-cards .link-card {
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0rem;
+  border-radius: 0.35rem;
+  background: var(--white);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+}
+
+.link-cards .original {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+.link-cards .shortened {
+  color: var(--cyan);
+  margin-left: auto;
+}
+
+.link-cards .btn {
+  margin-left: 0.75rem;
+}
+
+.link-cards #copy {
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: var(--cyan);
+  padding: 0.25rem 1rem;
+  border-radius: 0.2rem;
+}
+
+.link-cards #copy:hover {
+  background: var(--dark-violet);
+}
+
+.link-cards #delete {
+  fill: var(--red);
+  font-size: 0rem;
+  width: 1rem;
+  height: 1rem;
+  background: url('img/delete.svg') no-repeat;
+  background-size: cover;
+}
+
+.link-cards #copy-el-text-area {
+  position: absolute;
+  left: -9999px;
+}
